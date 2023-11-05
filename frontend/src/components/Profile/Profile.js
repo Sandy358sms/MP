@@ -49,7 +49,7 @@ function Profile() {
     };
 
     axios
-      .post("http://localhost:8080/user/profile", formObject)
+      .post("http://localhost:8081/user/profile", formObject)
       .then(() => {
         setShowModal(true);
         setShowForm(false);
@@ -59,7 +59,7 @@ function Profile() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/user/profile")
+      .get("http://localhost:8081/user/profile")
       .then(({ data }) => {
         return setUserData(data);
       })

@@ -22,7 +22,7 @@ function AdminDonations() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/admin/donate")
+      .get("http://localhost:8081/admin/donate")
       .then(({ data }) => {
         setData(data);
       })

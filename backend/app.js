@@ -15,7 +15,7 @@ const { cronExp, functionCall } = require("./utils/scheduler");
 // requiring extra dependencies
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const PORT = process.env.PORT || 8080;
+const PORT =8081;
 
 //file import
 const userRouter = require("./routes/userRouter");
@@ -96,31 +96,11 @@ sequelize
           id: 1,
           isAdmin: 1,
           name: "Admin",
-          email: "admin@medDonate.com",
-          password: "admin123",
-          phone_number: "9175899936",
-          city: "Vasai",
-          address: "000",
-        },
-        {
-          id: 2,
-          isAdmin: 0,
-          name: "Bhargav",
-          email: "bhargav@gmail.com",
-          password: "12345678",
-          phone_number: "9175899936",
-          city: "Vasai",
-          address: "Abhilasha, Sai Nagar, Vasai west",
-        },
-        {
-          id: 3,
-          isAdmin: 0,
-          name: "Jimit",
-          email: "jimit@gmail.com",
-          password: "12345678",
-          phone_number: "8329021699",
-          city: "Dahisar",
-          address: "Abhilasha, Sai Nagar, Dahisar west",
+          email: "spnwankhede1998@gmail.com",
+          password: "pappu@123",
+          phone_number: "7057629204",
+          city: "Bhandara",
+          address: "441903",
         },
       ]);
     } else {

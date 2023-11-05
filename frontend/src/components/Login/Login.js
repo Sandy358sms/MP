@@ -49,7 +49,7 @@ function Login() {
 
     //LOGIN
     axios
-      .post("http://localhost:8080/user/login", {
+      .post("http://localhost:8081/user/login", {
         email: LEInputValue,
         password: LPInputValue,
       })
@@ -156,7 +156,7 @@ function Login() {
     e.preventDefault();
     // make post req to db -> validate -> login
     axios
-      .post("http://localhost:8080/user/register", {
+      .post("http://localhost:8081/user/register", {
         name: RNINputValue,
         email: REINputValue,
         password: RPINputValue,

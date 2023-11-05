@@ -69,7 +69,7 @@ function Donate() {
 
       // db request
       axios
-        .post("http://localhost:8080/user/donate", donationFormObj)
+        .post("http://localhost:8081/user/donate", donationFormObj)
         .then((res) => {
           clearForm();
           setShowModal(true);

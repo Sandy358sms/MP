@@ -24,7 +24,7 @@ function Receive() {
   // get medicines from db
   useEffect(() => {
     axios
-      .get("http://localhost:8080/user/donate")
+      .get("http://localhost:8081/user/donate")
       .then(({ data }) => {
         setMedicines(data);
       })

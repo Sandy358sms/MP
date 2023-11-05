@@ -13,7 +13,7 @@ function Navbar() {
 
   const logoutHandler = (token) => {
     axios
-      .post(`http://localhost:8080/user/logout/${token}`)
+      .post(`http://localhost:8081/user/logout/${token}`)
       .then(() => {
         // remove client side session
         logout();

@@ -10,7 +10,7 @@ import { AppContext } from "../../utils/store/appContext";
 
 const changeOrderState = (orderId, type) => {
   axios
-    .post(`http://localhost:8080/user/order-status/${orderId}/${type}`)
+    .post(`http://localhost:8081/user/order-status/${orderId}/${type}`)
     .then(() => {
       console.log("Order status changed");
       window.location.reload();
@@ -338,7 +338,7 @@ function MyDonations() {
   useEffect(() => {
     if (pageState === "donate") {
       axios
-        .get(`http://localhost:8080/user/donated-meds/${ctx.token}`)
+        .get(`http://localhost:8081/user/donated-meds/${ctx.token}`)
         .then(({ data }) => {
           let queryData = getData(pageState, data);
           setQueryRes(queryData);
@@ -346,7 +346,7 @@ function MyDonations() {
         .catch((err) => console.log(err));
     } else {
       axios
-        .get(`http://localhost:8080/user/received-meds/${ctx.token}`)
+        .get(`http://localhost:8081/user/received-meds/${ctx.token}`)
         .then(({ data }) => {
           console.log(data);
           let queryData = getData(pageState, data);

@@ -17,7 +17,7 @@ function AdminReviewMeds() {
 
   const adminApproveDonation = (medId) => {
     axios
-      .post(`http://localhost:8080/admin/donate-approve/${medId}`)
+      .post(`http://localhost:8081/admin/donate-approve/${medId}`)
       .then(() => {
         setReqMode("create");
         setModal(true);
@@ -26,7 +26,7 @@ function AdminReviewMeds() {
   };
   const adminRejectDonation = (medId) => {
     axios
-      .post(`http://localhost:8080/admin/donate-reject/${medId}`)
+      .post(`http://localhost:8081/admin/donate-reject/${medId}`)
       .then(() => {
         setReqMode("reject");
         setModal(true);
@@ -42,7 +42,7 @@ function AdminReviewMeds() {
   useEffect(() => {
     // initiate db query
     axios
-      .get(`http://localhost:8080/admin/donate/${medId}`)
+      .get(`http://localhost:8081/admin/donate/${medId}`)
       .then(({ data }) => {
         if (data) {
           setDataObj(data);

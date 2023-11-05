@@ -21,7 +21,7 @@ function AdminUsers() {
 
   const deleteAUser = (userId) => {
     axios
-      .post(`http://localhost:8080/admin/delete-user/${userId}`)
+      .post(`http://localhost:8081/admin/delete-user/${userId}`)
       .then(() => {
         setReqType("delete");
         setShowModal(true);
@@ -116,7 +116,7 @@ function AdminUsers() {
     };
 
     axios
-      .post("http://localhost:8080/admin/create-user", formObject)
+      .post("http://localhost:8081/admin/create-user", formObject)
       .then(() => {
         setReqType("create");
         setShowModal(true);
@@ -194,7 +194,7 @@ function AdminUsers() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/admin/users")
+      .get("http://localhost:8081/admin/users")
       .then(({ data }) => {
         let allUsers = getUsers(data);
         setUsers(allUsers);

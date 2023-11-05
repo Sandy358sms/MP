@@ -226,7 +226,7 @@ function AdminReceive() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/admin/receive")
+      .get("http://localhost:8081/admin/receive")
       .then(({ data }) => {
         const queryData = getData(data);
         setQueryRes(queryData);
@@ -241,7 +241,7 @@ function AdminReceive() {
 
   const adminAcceptReceive = (medId) => {
     axios
-      .post(`http://localhost:8080/admin/receive-approve/${medId}`)
+      .post(`http://localhost:8081/admin/receive-approve/${medId}`)
       .then(() => {
         setReqMode("create");
         setModal(true);
@@ -250,7 +250,7 @@ function AdminReceive() {
   };
   const adminRejectReceive = (medId) => {
     axios
-      .post(`http://localhost:8080/admin/receive-reject/${medId}`)
+      .post(`http://localhost:8081/admin/receive-reject/${medId}`)
       .then(() => {
         setReqMode("reject");
         setModal(true);

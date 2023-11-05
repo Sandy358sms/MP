@@ -21,7 +21,7 @@ function Checkout() {
   useEffect(() => {
     // initiate db query
     axios
-      .get(`http://localhost:8080/user/donate/${id}`)
+      .get(`http://localhost:8081/user/donate/${id}`)
       .then(({ data }) => {
         if (data) {
           setDataObj(data);
@@ -34,7 +34,7 @@ function Checkout() {
 
   const createOrder = () => {
     axios
-      .post(`http://localhost:8080/user/receive/${ctx.token}/${dataObj.id}`)
+      .post(`http://localhost:8081/user/receive/${ctx.token}/${dataObj.id}`)
       .then(() => {
         // display modal
         setShowCreateOrder(false);
